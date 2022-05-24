@@ -1,0 +1,255 @@
+input : 
+
+4
+addi r1 ,r0 ,0
+addi r2 ,r1 ,10
+Loop:
+beq r1 ,r2 ,End
+addi r2 ,r2 ,-1
+beq r0 ,r0 ,Loop
+End:
+^Z
+
+
+Output :
+Please input entry number:4
+Plese input your String:(end with EOF or ctrl+z)
+addi r1 ,r0 ,0
+addi r2 ,r1 ,10
+Loop:
+beq r1 ,r2 ,End
+addi r2 ,r2 ,-1
+beq r0 ,r0 ,Loop
+End:
+^Z
+
+Entry: 0        addi r1 r0 0
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 1        addi r2 r1 10
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 2        beq r1 r2 End
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 3        addi r2 r2 -1
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 0        beq r0 r0 Loop
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : T      mistaken : 1
+
+Entry: 2        beq r1 r2 End
+001 WN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 3        addi r2 r2 -1
+001 WN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 0        beq r0 r0 Loop
+001 WN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : T      mistaken : 2
+
+Entry: 2        beq r1 r2 End
+011 WN WN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 3        addi r2 r2 -1
+011 WN WN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 0        beq r0 r0 Loop
+011 WN WN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : T      mistaken : 3
+
+Entry: 2        beq r1 r2 End
+111 WN WN SN WN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 3        addi r2 r2 -1
+111 WN WN SN WN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 0        beq r0 r0 Loop
+111 WN WN SN WN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : T      mistaken : 4
+
+Entry: 2        beq r1 r2 End
+111 WN WN SN WN SN SN SN WN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 3        addi r2 r2 -1
+111 WN WN SN WN SN SN SN WN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 0        beq r0 r0 Loop
+111 WN WN SN WN SN SN SN WN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : T      mistaken : 5
+
+Entry: 2        beq r1 r2 End
+111 WN WN SN WN SN SN SN WT
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 3        addi r2 r2 -1
+111 WN WN SN WN SN SN SN WT
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 0        beq r0 r0 Loop
+111 WN WN SN WN SN SN SN WT
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : T   actual : T      mistaken : 5
+
+Entry: 2        beq r1 r2 End
+111 WN WN SN WN SN SN SN ST
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 3        addi r2 r2 -1
+111 WN WN SN WN SN SN SN ST
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 0        beq r0 r0 Loop
+111 WN WN SN WN SN SN SN ST
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : T   actual : T      mistaken : 5
+
+Entry: 2        beq r1 r2 End
+111 WN WN SN WN SN SN SN ST
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 3        addi r2 r2 -1
+111 WN WN SN WN SN SN SN ST
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 0        beq r0 r0 Loop
+111 WN WN SN WN SN SN SN ST
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : T   actual : T      mistaken : 5
+
+Entry: 2        beq r1 r2 End
+111 WN WN SN WN SN SN SN ST
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 3        addi r2 r2 -1
+111 WN WN SN WN SN SN SN ST
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 0        beq r0 r0 Loop
+111 WN WN SN WN SN SN SN ST
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : T   actual : T      mistaken : 5
+
+Entry: 2        beq r1 r2 End
+111 WN WN SN WN SN SN SN ST
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 3        addi r2 r2 -1
+111 WN WN SN WN SN SN SN ST
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : N      mistaken : 0
+
+Entry: 0        beq r0 r0 Loop
+111 WN WN SN WN SN SN SN ST
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : T   actual : T      mistaken : 5
+
+Entry: 2        beq r1 r2 End
+111 WN WN SN WN SN SN SN ST
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+000 SN SN SN SN SN SN SN SN
+predict : N   actual : T      mistaken : 1
